@@ -1,0 +1,1849 @@
+-- ykyk unobf
+
+local _Players = game:GetService('Players')
+
+game:GetService('TweenService')
+game:GetService('CoreGui')
+game:GetService('StarterGui')
+
+local _ = _Players.LocalPlayer
+local _Players2 = game:GetService('Players')
+local _TweenService = game:GetService('TweenService')
+local _Lighting = game:GetService('Lighting')
+local _LocalPlayer = _Players2.LocalPlayer
+local _BlurEffect = Instance.new('BlurEffect', _Lighting)
+
+_BlurEffect.Size = 0
+
+local v7 = _TweenService
+
+_TweenService.Create(v7, _BlurEffect, TweenInfo.new(0.5), {Size = 24}):Play()
+
+local _ScreenGui = Instance.new('ScreenGui', _LocalPlayer:WaitForChild('PlayerGui'))
+
+_ScreenGui.Name = 'FHubLoader'
+_ScreenGui.ResetOnSpawn = false
+_ScreenGui.IgnoreGuiInset = true
+
+local _Frame = Instance.new('Frame', _ScreenGui)
+
+_Frame.Size = UDim2.new(1, 0, 1, 0)
+_Frame.BackgroundTransparency = 1
+
+local _Frame2 = Instance.new('Frame', _Frame)
+
+_Frame2.Size = UDim2.new(1, 0, 1, 0)
+_Frame2.BackgroundColor3 = Color3.fromRGB(10, 10, 20)
+_Frame2.BackgroundTransparency = 1
+_Frame2.ZIndex = 0
+
+local v11 = _TweenService
+
+_TweenService.Create(v11, _Frame2, TweenInfo.new(0.5), {BackgroundTransparency = 0.3}):Play()
+
+local v12 = 'KNTLHUB'
+local u13 = {}
+
+local function v18()
+    local v14, v15, v16 = ipairs(u13)
+
+    while true do
+        local v17
+
+        v16, v17 = v14(v15, v16)
+
+        if v16 == nil then
+            break
+        end
+
+        _TweenService:Create(v17, TweenInfo.new(0.3), {
+            TextTransparency = 1,
+            TextSize = 20,
+        }):Play()
+    end
+
+    _TweenService:Create(_Frame2, TweenInfo.new(0.5), {BackgroundTransparency = 1}):Play()
+    _TweenService:Create(_BlurEffect, TweenInfo.new(0.5), {Size = 0}):Play()
+    wait(0.8)
+    _ScreenGui:Destroy()
+    _BlurEffect:Destroy()
+end
+
+local v19 = u13
+local v20 = _TweenService
+
+for v21 = 1, #v12 do
+    local v22 = v12:sub(v21, v21)
+    local _TextLabel = Instance.new('TextLabel')
+
+    _TextLabel.Text = v22
+    _TextLabel.Font = Enum.Font.GothamBlack
+    _TextLabel.TextColor3 = Color3.new(1, 1, 1)
+    _TextLabel.TextStrokeTransparency = 1
+    _TextLabel.TextTransparency = 1
+    _TextLabel.TextScaled = false
+    _TextLabel.TextSize = 30
+    _TextLabel.Size = UDim2.new(0, 60, 0, 60)
+    _TextLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+    _TextLabel.Position = UDim2.new(0.5, (v21 - (#v12 / 2 + 0.5)) * 65, 0.5, 0)
+    _TextLabel.BackgroundTransparency = 1
+    _TextLabel.Parent = _Frame
+
+    local _UIGradient = Instance.new('UIGradient')
+
+    _UIGradient.Color = ColorSequence.new({
+        ColorSequenceKeypoint.new(0, Color3.fromRGB(100, 170, 255)),
+        ColorSequenceKeypoint.new(1, Color3.fromRGB(50, 100, 160)),
+    })
+    _UIGradient.Rotation = 90
+    _UIGradient.Parent = _TextLabel
+
+    v20:Create(_TextLabel, TweenInfo.new(0.3), {
+        TextTransparency = 0,
+        TextSize = 60,
+    }):Play()
+    table.insert(v19, _TextLabel)
+    wait(0.25)
+end
+
+wait(5)
+v18()
+
+repeat
+    wait()
+until game:IsLoaded()
+
+local _ = workspace.CurrentCamera
+local _Workspace = game:GetService('Workspace')
+
+game:GetService('ReplicatedStorage')
+
+local _Players3 = game:GetService('Players')
+
+game:GetService('CoreGui')
+
+local _LocalPlayer2 = game:GetService('Players').LocalPlayer
+local _ = _LocalPlayer2.Character.HumanoidRootPart
+
+game:GetService('VirtualUser')
+
+local _VirtualInputManager = game:GetService('VirtualInputManager')
+
+game:GetService('TweenService')
+game:GetService('UserInputService')
+game:GetService('HttpService')
+game:GetService('RunService')
+game:GetService('TeleportService')
+
+local _RunService = game:GetService('RunService')
+local _ = _Players3.LocalPlayer
+
+game:GetService('TeleportService')
+
+local _RemoteEvents = game:GetService('ReplicatedStorage').NetworkContainer.RemoteEvents
+
+os.date('%A')
+os.date('%B')
+os.date('%d')
+os.date('%Y')
+
+local _ = game.Players.LocalPlayer.Name
+
+os.date('%X')
+os.date('%x')
+
+local _ = _LocalPlayer2:GetMouse()
+local u31 = false
+
+if not (syn and syn.request or http and http.request) then
+    local _ = http_request
+end
+if not getconnections then
+    local _ = get_signal_cons
+end
+
+require(game:GetService('ReplicatedStorage').Modules.Job)
+require(game:GetService('ReplicatedStorage').Modules.Network)
+require(game:GetService('ReplicatedStorage').Modules.Tween)
+
+local _Name = game:GetService('MarketplaceService'):GetProductInfo(game.PlaceId).Name
+local u33 = os.time()
+
+os.date('!*t', u33)
+
+local u34 = loadstring(game:HttpGet('https://github.com/dawid-scripts/Fluent/releases/download/1.1.0/main.lua'))()
+local u35 = loadstring(game:HttpGet('https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua'))()
+local u36 = loadstring(game:HttpGet('https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua'))()
+
+function notify(p37, p38, p39)
+    u34:Notify({
+        Title = p37,
+        Content = p38,
+        Duration = p39,
+    })
+end
+
+local v40 = u34
+local u41 = u34.CreateWindow(v40, {
+    Title = 'Kntl Hub',
+    SubTitle = 'Public Script [buggy]',
+    TabWidth = 160,
+    Size = UDim2.fromOffset(480, 350),
+    Acrylic = false,
+    Theme = 'Amethyst',
+    MinimizeKey = Enum.KeyCode.LeftControl,
+})
+
+function sendNotification()
+    local _AccountExecuteInformationsRobloxNamesExecutorNamesMapNamesHWIDs = string.format('\u{fffd}\u{fffd}\u{fffd}\u{fffd}\u{fffd}\u{fffd}\u{200d}\u{2642}\u{fe0f} | Account & Execute Informations\n> - Roblox Name: ``%s``\n> - Executor Name: ``%s``\n> - Map Name: ``%s``\n> - HWID: ``%s``\n', _LocalPlayer2.Name, identifyexecutor(), _Name, game:GetService('RbxAnalyticsService'):GetClientId())
+    local v43 = {
+        title = 'Script Executions',
+        color = tonumber(16777215),
+        description = _AccountExecuteInformationsRobloxNamesExecutorNamesMapNamesHWIDs,
+        author = {
+            name = 'Kntl Hub \u{fffd}\u{fffd}\u{fffd}\u{fffd}\u{fffd}\u{fffd}',
+            url = '',
+            icon_url = '',
+        },
+        timestamp = os.date('!%Y-%m-%dT%H:%M:%SZ', u33),
+        footer = {
+            text = ' KNTL Hub Devloper',
+            icon_url = '',
+        },
+    }
+    local v44 = game:GetService('HttpService'):JSONEncode({
+        embeds = {v43},
+    });
+
+    (syn and syn.request or http_request)({
+        Url = 'https://discord.com/api/webhooks/1287155616028299304/oCx1tJ5-S4mlQF-Iv4USNJ8g1dsZawhX6sUApcAz2KVL4CjNHVgigi796Lz8MohE5UOs',
+        Method = 'POST',
+        Headers = {
+            ['Content-Type'] = 'application/json',
+        },
+        Body = v44,
+    })
+    syn.request:PostAsync('', v44)
+end
+
+local u45 = {
+    WebhookName = 'Kntl Hub',
+    WebhookLink = 'Unknown',
+    FarmingTime = '00:00:00 (0 minutes)',
+    CurrentTime = '00.00 WIB',
+    StartFarming = '00.00 WIB',
+    TotalTelport = 0,
+    CountdownTelport = 55,
+    Destination = 'Unknown',
+    CurrentMoney = _LocalPlayer2:FindFirstChild('PlayerGui').Main.Container.Hub.CashFrame.Frame.TextLabel.Text,
+    SalaryMoney = _LocalPlayer2:FindFirstChild('PlayerGui').PhoneUI.HolderHP.Homescreen.ProfileScreen.MainFrame.EarningFrame.Value.Text,
+    TargetMoney = 999999999,
+    TimeToTarget = '00000 Hours, 00 Minutes, 00 Seconds',
+    DateToTarget = '00/00/0000 00:00',
+    AutoFarmMethod = 'Instant',
+}
+
+function Yetetea(_)
+    local _TimeandAccountInformationWebhookNamesFarmingTimesCurrentTimesStartedTimesTotalTeleportdLatestDestinationsMoneyInformationCurrentMoneysTotalofSalarys = string.format('\u{231a} | Time and Account Information\n> - Webhook Name: ``%s``\n> - Farming Time: ``%s``\n> - Current Time: ``%s``\n> - Started Time: ``%s``\n> - Total Teleport: ``%d``\n> - Latest Destination: ``%s``\n\u{fffd}\u{fffd}\u{fffd}\u{fffd}\u{fffd}\u{fffd} | Money Information\n> - Current Money: ``%s``\n> - Total of Salary: ``%s``\n', u45.WebhookName, u45.FarmingTime, u45.CurrentTime, u45.StartFarming, u45.TotalTelport, u45.Destination, u45.CurrentMoney, u45.SalaryMoney)
+    local v47 = {
+        title = 'Click this to join our discord \u{fffd}\u{fffd}\u{fffd}\u{fffd}\u{fffd}\u{fffd}',
+        url = '',
+        color = tonumber(16777215),
+        description = _TimeandAccountInformationWebhookNamesFarmingTimesCurrentTimesStartedTimesTotalTeleportdLatestDestinationsMoneyInformationCurrentMoneysTotalofSalarys,
+        author = {
+            name = '\u{fffd}\u{fffd}\u{fffd}\u{fffd}\u{fffd}\u{fffd} | AutoFarming Logs',
+            icon_url = '',
+        },
+        timestamp = os.date('!%Y-%m-%dT%H:%M:%SZ', u33),
+        footer = {
+            text = 'Kntl Hub Development Team',
+            icon_url = '',
+        },
+    }
+    local v48 = syn and syn.request or http_request
+    local v49 = {
+        Url = u45.WebhookLink,
+        Method = 'POST',
+        Headers = {
+            ['Content-Type'] = 'application/json',
+        },
+        Body = game:GetService('HttpService'):JSONEncode({
+            embeds = {v47},
+        }),
+    }
+
+    v48(v49)
+end
+function TeleportTrans(p50)
+    game:GetService('ReplicatedStorage').NetworkContainer.RemoteEvents.TransEvent:FireServer(p50)
+end
+
+local u51 = {}
+local v52 = u41
+
+u51.MainTab = u41.AddTab(v52, {
+    Title = 'Main',
+    Icon = 'home',
+})
+
+local v53 = u41
+
+u51.LocalPlayerTab = u41.AddTab(v53, {
+    Title = 'LocalPlayer',
+    Icon = 'smile',
+})
+
+local v54 = u41
+
+u51.TruckTab = u41.AddTab(v54, {
+    Title = 'Farming',
+    Icon = 'truck',
+})
+
+local v55 = u41
+
+u51.WebhookTab = u41.AddTab(v55, {
+    Title = 'Webhook',
+    Icon = 'anchor',
+})
+
+local v56 = u41
+
+u51.Vehicle = u41.AddTab(v56, {
+    Title = 'Vehicle Mod',
+    Icon = 'car',
+})
+
+local v57 = u41
+
+u51.Credits = u41.AddTab(v57, {
+    Title = 'Credits',
+    Icon = 'copyright',
+})
+
+local v58 = u41
+
+u51.Settings = u41.AddTab(v58, {
+    Title = 'Settings',
+    Icon = 'settings',
+})
+
+local _Options = u34.Options
+
+u51.Credits:AddParagraph({
+    Title = '?',
+    Content = 'Founder & Developer',
+})
+u51.LocalPlayerTab:AddSlider('Slider', {
+    Title = 'Walkspeed',
+    Description = ' ',
+    Default = 16,
+    Min = 2,
+    Max = 250,
+    Rounding = 1,
+    Callback = function(p60)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = p60
+    end,
+})
+u51.LocalPlayerTab:AddSlider('Slider', {
+    Title = 'Jump Power',
+    Description = ' ',
+    Default = 16,
+    Min = 2,
+    Max = 250,
+    Rounding = 1,
+    Callback = function(p61)
+        game.Players.LocalPlayer.Character.Humanoid.JumpHeight = p61
+    end,
+})
+
+local u62 = u51.Vehicle:AddButton({
+    Title = 'Create vehicle feature',
+    Description = 'make sure you already spawned your vehicle!',
+    Callback = function()
+        u41:Dialog({
+            Title = 'IMPORTANT',
+            Content = 'are you already spawn your vehicle?',
+            Buttons = {
+                {
+                    Title = 'Yes',
+                    Callback = function()
+                        VehicleFeature()
+                    end,
+                },
+                {
+                    Title = 'No',
+                    Callback = function()
+                        print('Cancelled the dialog.')
+                    end,
+                },
+            },
+        })
+    end,
+})
+
+function VehicleFeature()
+    u62:Destroy()
+    u51.Vehicle:AddInput('frontplate', {
+        Title = 'Front Date Plate',
+        Default = workspace.Vehicles:FindFirstChild(_LocalPlayer2.Name .. 'sCar').Body.Plate.F.Date.SGUI.Date.Text,
+        Placeholder = ' ',
+        Numeric = false,
+        Finished = true,
+        Callback = function(p63)
+            workspace.Vehicles:FindFirstChild(_LocalPlayer2.Name .. 'sCar').Body.Plate.F.Date.SGUI.Date.Text = p63
+        end,
+    })
+    u51.Vehicle:AddInput('rearplate', {
+        Title = 'Rear Date Plate',
+        Default = workspace.Vehicles:FindFirstChild(_LocalPlayer2.Name .. 'sCar').Body.Plate.R.Date.SGUI.Date.Text,
+        Placeholder = ' ',
+        Numeric = false,
+        Finished = true,
+        Callback = function(p64)
+            workspace.Vehicles:FindFirstChild(_LocalPlayer2.Name .. 'sCar').Body.Plate.R.Date.SGUI.Date.Text = p64
+        end,
+    })
+    u51.Vehicle:AddInput('frontplateMain', {
+        Title = 'Front Main Plate',
+        Default = workspace.Vehicles:FindFirstChild(_LocalPlayer2.Name .. 'sCar').Body['Plate Text'].Plates.Front.SGUI.Identifier.Text,
+        Placeholder = ' ',
+        Numeric = false,
+        Finished = true,
+        Callback = function(p65)
+            workspace.Vehicles:FindFirstChild(_LocalPlayer2.Name .. 'sCar').Body['Plate Text'].Plates.Front.SGUI.Identifier.Text = p65
+        end,
+    })
+    u51.Vehicle:AddInput('rearplateMain', {
+        Title = 'Rear Main Plate',
+        Default = workspace.Vehicles:FindFirstChild(_LocalPlayer2.Name .. 'sCar').Body['Plate Text'].Plates.Rear.SGUI.Identifier.Text,
+        Placeholder = ' ',
+        Numeric = false,
+        Finished = true,
+        Callback = function(p66)
+            workspace.Vehicles:FindFirstChild(_LocalPlayer2.Name .. 'sCar').Body['Plate Text'].Plates.Rear.SGUI.Identifier.Text = p66
+        end,
+    })
+    u51.Vehicle:AddButton({
+        Title = 'Remove Plate',
+        Description = 'reset spawn to add car plate again',
+        Callback = function()
+            workspace.Vehicles:FindFirstChild(_LocalPlayer2.Name .. 'sCar').Body.Plate:Destroy()
+            workspace.Vehicles:FindFirstChild(_LocalPlayer2.Name .. 'sCar').Body['Plate Text']:Destroy()
+        end,
+    })
+
+    local _CPart = workspace.Vehicles:FindFirstChild(_LocalPlayer2.Name .. 'sCar').Body.Body.CPart
+    local _Windows = workspace.Vehicles:FindFirstChild(_LocalPlayer2.Name .. 'sCar').Body.Body.Windows
+    local _Colorpicker = u51.Vehicle:AddColorpicker('Colorpicker', {
+        Title = 'Car Color',
+        Default = _CPart.Color,
+    })
+    local v70 = _Colorpicker
+
+    _Colorpicker.OnChanged(v70, function()
+        _CPart.Color = _Colorpicker.Value
+    end)
+
+    local _Colorpicker2 = u51.Vehicle:AddColorpicker('Colorpicker', {
+        Title = 'Car Window Color',
+        Default = _CPart.Color,
+    })
+    local v72 = _Colorpicker2
+
+    _Colorpicker2.OnChanged(v72, function()
+        _Windows.Color = _Colorpicker2.Value
+    end)
+
+    local _Fogs = workspace.Vehicles:FindFirstChild(_LocalPlayer2.Name .. 'sCar').Body.Lights.Fogs
+    local _HighBeam = workspace.Vehicles:FindFirstChild(_LocalPlayer2.Name .. 'sCar').Body.Lights.HighBeam
+    local _LowBeam = workspace.Vehicles:FindFirstChild(_LocalPlayer2.Name .. 'sCar').Body.Lights.LowBeam
+    local _Colorpicker3 = u51.Vehicle:AddColorpicker('Colorpicker', {
+        Title = 'Color Fogs Objek',
+        Default = _Fogs.Color,
+    })
+    local _Colorpicker4 = u51.Vehicle:AddColorpicker('Colorpicker', {
+        Title = 'Color High Beams Objek',
+        Default = _HighBeam.Color,
+    })
+    local _Colorpicker5 = u51.Vehicle:AddColorpicker('Colorpicker', {
+        Title = 'Color Low Beams Objek',
+        Default = _LowBeam.Color,
+    })
+    local v79 = _Colorpicker3
+
+    _Colorpicker3.OnChanged(v79, function()
+        _Fogs.Color = _Colorpicker3.Value
+    end)
+
+    local v80 = _Colorpicker4
+
+    _Colorpicker4.OnChanged(v80, function()
+        _HighBeam.Color = _Colorpicker4.Value
+    end)
+
+    local v81 = _Colorpicker5
+
+    _Colorpicker5.OnChanged(v81, function()
+        _LowBeam.Color = _Colorpicker5.Value
+    end)
+
+    local _LeftLightningColor = u51.Vehicle:AddSection('Left Lightning Color')
+    local _RightLightningColor = u51.Vehicle:AddSection('Right Lightning Color')
+    local _Fun = u51.Vehicle:AddSection('Fun')
+    local _FB = workspace.Vehicles:FindFirstChild(_LocalPlayer2.Name .. 'sCar').Body.Lights.Light.Left.FB
+    local _FB2 = workspace.Vehicles:FindFirstChild(_LocalPlayer2.Name .. 'sCar').Body.Lights.Light.Left.FB2
+    local _Fogs2 = workspace.Vehicles:FindFirstChild(_LocalPlayer2.Name .. 'sCar').Body.Lights.Light.Left.Fogs
+    local _FB3 = workspace.Vehicles:FindFirstChild(_LocalPlayer2.Name .. 'sCar').Body.Lights.Light.Right.FB
+    local _FB22 = workspace.Vehicles:FindFirstChild(_LocalPlayer2.Name .. 'sCar').Body.Lights.Light.Right.FB2
+    local _Fogs3 = workspace.Vehicles:FindFirstChild(_LocalPlayer2.Name .. 'sCar').Body.Lights.Light.Right.Fogs
+    local _Colorpicker6 = _RightLightningColor:AddColorpicker('Colorpicker', {
+        Title = 'Lightning LB',
+        Default = _FB3.Color,
+    })
+    local _Colorpicker7 = _RightLightningColor:AddColorpicker('Colorpicker', {
+        Title = 'Lightning HB',
+        Default = _FB22.Color,
+    })
+    local _Colorpicker8 = _RightLightningColor:AddColorpicker('Colorpicker', {
+        Title = 'Lightning Fogs',
+        Default = _Fogs3.Color,
+    })
+    local v94 = _Colorpicker6
+
+    _Colorpicker6.OnChanged(v94, function()
+        _FB3.Color = _Colorpicker6.Value
+    end)
+
+    local v95 = _Colorpicker7
+
+    _Colorpicker7.OnChanged(v95, function()
+        _FB22.Color = _Colorpicker7.Value
+    end)
+
+    local v96 = _Colorpicker8
+
+    _Colorpicker8.OnChanged(v96, function()
+        _Fogs3.Color = _Colorpicker8.Value
+    end)
+
+    local _Colorpicker9 = _LeftLightningColor:AddColorpicker('Colorpicker', {
+        Title = 'Lightning LB',
+        Default = _FB.Color,
+    })
+    local _Colorpicker10 = _LeftLightningColor:AddColorpicker('Colorpicker', {
+        Title = 'Lightning HB',
+        Default = _FB2.Color,
+    })
+    local _Colorpicker11 = _LeftLightningColor:AddColorpicker('Colorpicker', {
+        Title = 'Lightning Fogs',
+        Default = _Fogs2.Color,
+    })
+    local v100 = _Colorpicker9
+
+    _Colorpicker9.OnChanged(v100, function()
+        _FB.Color = _Colorpicker9.Value
+    end)
+
+    local v101 = _Colorpicker10
+
+    _Colorpicker10.OnChanged(v101, function()
+        _FB2.Color = _Colorpicker10.Value
+    end)
+
+    local v102 = _Colorpicker11
+
+    _Colorpicker11.OnChanged(v102, function()
+        _Fogs2.Color = _Colorpicker11.Value
+    end)
+
+    local _CPart2 = workspace.Vehicles:FindFirstChild(_LocalPlayer2.Name .. 'sCar').Body.Body.CPart
+    local _Windows2 = workspace.Vehicles:FindFirstChild(_LocalPlayer2.Name .. 'sCar').Body.Body.Windows
+    local _Vehicles = workspace.Vehicles
+    local u106 = nil
+    local u107 = nil
+    local _RGCAR = _Fun:AddToggle('RGCAR', {
+        Title = 'RGB Car',
+        Default = false,
+    })
+    local _WRGB = _Fun:AddToggle('WRGB', {
+        Title = 'RGB Window',
+        Default = false,
+    })
+
+    _Fun:AddToggle('BRC', {
+        Title = 'Bring all Car',
+        Default = false,
+    }):OnChanged(function()
+        if _Options.BRC.Value then
+            while true do
+                if _Vehicles then
+                    local v110 = _LocalPlayer2.Character and _LocalPlayer2.Character:FindFirstChild('HumanoidRootPart')
+
+                    if v110 then
+                        v110 = _LocalPlayer2.Character.HumanoidRootPart.Position
+                    end
+                    if v110 then
+                        local v111 = _Vehicles
+                        local v112, v113, v114 = ipairs(v111:GetChildren())
+
+                        while true do
+                            local v115
+
+                            v114, v115 = v112(v113, v114)
+
+                            if v114 == nil then
+                                break
+                            end
+                            if v115:IsA('Model') and v115.PrimaryPart then
+                                v115:SetPrimaryPartCFrame(CFrame.new(v110))
+                            end
+                        end
+                    end
+                end
+
+                wait()
+
+                if not _Options.BRC.Value then
+                end
+            end
+        else
+            return
+        end
+    end)
+    _RGCAR:OnChanged(function()
+        if _Options.RGCAR.Value then
+            local u116 = 0
+            local u117 = 1
+
+            if u106 then
+                u106:Disconnect()
+            end
+
+            u106 = _RunService.RenderStepped:Connect(function(p118)
+                u116 = (u116 + p118 * u117) % 1
+                _CPart2.Color = Color3.fromHSV(u116, 1, 1)
+            end)
+        elseif u106 then
+            u106:Disconnect()
+
+            u106 = nil
+        end
+    end)
+    _WRGB:OnChanged(function()
+        if _Options.WRGB.Value then
+            local u119 = 0
+            local u120 = 1
+
+            if u107 then
+                u107:Disconnect()
+            end
+
+            u107 = _RunService.RenderStepped:Connect(function(p121)
+                u119 = (u119 + p121 * u120) % 1
+                _Windows2.Color = Color3.fromHSV(u119, 1, 1)
+            end)
+        elseif u107 then
+            u107:Disconnect()
+
+            u107 = nil
+        end
+    end)
+end
+function tweeningObject(p122, p123)
+    local _LocalPlayer3 = game:GetService('Players').LocalPlayer
+    local v125 = game:GetService('TweenService'):Create(_LocalPlayer3.Character.HumanoidRootPart, TweenInfo.new(p123, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0, false, 0), {CFrame = p122})
+
+    v125:Play()
+    v125.Completed:Wait()
+end
+function gotoDealership()
+    local v126 = {
+        CFrame.new(-13010.2803, 46.8383064, 1886.19617, -0.499959469, 0, 0.866048813, 0, -1, 0, 0.866048813, 0, 0.499959469),
+        CFrame.new(-12263.7881, 46.1981049, 1973.57812, -0.866007447, 0, -0.500031412, 0, -1.00000024, 0, -0.500031412, 0, 0.866007268),
+        CFrame.new(-14798.0957, 48.263916, 853.550903, -0.499959469, 0, 0.866048813, 0, -1, 0, 0.866048813, 0, 0.499959469),
+        CFrame.new(-15228.6787, -97.3615036, 30053.9727, 0.258653998, 0, 0.965970039, 0, -1, 0, 0.965970039, 0, -0.258653998),
+        CFrame.new(-5130.23682, 204.879227, 27456.0801, -0.500045776, 0, -0.865998983, 0, -1, 0, -0.865998983, 0, 0.500045776),
+        CFrame.new(-5136.53955, 205.129257, 27308.1758, -0.499959469, 0, -0.866048813, 0, -1, 0, -0.866048813, 0, 0.499959469),
+        CFrame.new(-4278.76172, 213.565567, 28127.0977, 0.866007268, 0, -0.500031412, 0, -1.00000024, 0, -0.500031412, 0, -0.866007447),
+        CFrame.new(-3791.33374, 206.583069, 29516.4141, -0.866007447, 0, 0.500031412, 0, -1.00000024, 0, 0.500031412, 0, 0.866007268),
+        CFrame.new(-2349.09473, 206.111053, 29134.7949, -0.499268651, 0, -0.86644727, 0, -1, 0, -0.86644727, 0, 0.499268651),
+        CFrame.new(811.287354, 202.800964, 36686.6523, -0.707134247, 0, -0.707079291, 0, -1, 0, -0.707079291, 0, 0.707134247),
+    }
+    local v127, v128, v129 = ipairs(v126)
+
+    while true do
+        local v130
+
+        v129, v130 = v127(v128, v129)
+
+        if v129 == nil then
+            break
+        end
+
+        tweeningObject(v130, 30)
+        wait(2)
+    end
+end
+function gotoCity()
+    local v131 = _Workspace.Etc.TransCDID:GetChildren()
+    local v132, v133, v134 = ipairs(v131)
+    local v135 = {}
+
+    while true do
+        local v136
+
+        v134, v136 = v132(v133, v134)
+
+        if v134 == nil then
+            break
+        end
+
+        table.insert(v135, v136.Name)
+    end
+
+    local v137, v138, v139 = ipairs(v135)
+
+    while true do
+        local v140
+
+        v139, v140 = v137(v138, v139)
+
+        if v139 == nil then
+            break
+        end
+
+        print(v140)
+        wait(5)
+    end
+end
+function dailyQuest()
+    gotoDealership()
+end
+function addLogs(p141, p142)
+    return u51.TruckLogs:AddParagraph({
+        Title = p141,
+        Content = p142,
+    })
+end
+
+local _Config = u51.TruckTab:AddSection('Config')
+local u144 = 50
+local _sFarming = _Config:AddInput('sFarming', {
+    Title = 'Countdown',
+    Description = ' ',
+    Default = 40,
+    Placeholder = 'minimum 40 seconds',
+    Numeric = true,
+    Finished = false,
+    Callback = function(p145)
+        u144 = p145
+    end,
+})
+local v147 = _sFarming
+
+_sFarming.OnChanged(v147, function()
+    u144 = _sFarming.Value
+
+    print('Webhook updated:', _sFarming.Value)
+end)
+
+local u148 = 'No'
+
+_Config:AddDropdown('Dropdown', {
+    Title = 'Delete Map',
+    Values = {
+        'Yes',
+        'No',
+    },
+    Multi = false,
+    Default = 'Yes',
+}):OnChanged(function(p149)
+    u148 = p149
+end)
+_Config:AddButton({
+    Title = 'Start Farming',
+    Description = "You can't stop this farming.\nRelog or reset character to stop it.",
+    Callback = function()
+        u41:Dialog({
+            Title = 'Important\u{2757}',
+            Content = 'This Script Is Still In Beta Tester You Are The Chosen One Who Can Feel The Beta Test This Time. We ask you to report bugs in our script so that we can easily fix it and this script is not 100% safe from cdid staff logs so we ask you not to routinely execute the script\n\n\n~ ? (Founder & Developer Kntl Hub) ~',
+            Buttons = {
+                {
+                    Title = 'Confirm',
+                    Callback = function()
+                        dospecialFarm()
+                    end,
+                },
+                {
+                    Title = 'Cancel',
+                    Callback = function()
+                        print('Cancelled the dialog.')
+                    end,
+                },
+            },
+        })
+    end,
+})
+
+local _Stats = u51.TruckTab:AddSection('Stats')
+local u151 = _Stats:AddParagraph({
+    Title = 'Total Money',
+    Content = _LocalPlayer2:FindFirstChild('PlayerGui').Main.Container.Hub.CashFrame.Frame.TextLabel.Text,
+})
+local _Text = _LocalPlayer2:FindFirstChild('PlayerGui').PhoneUI.HolderHP.Homescreen.ProfileScreen.MainFrame.EarningFrame.Value.Text
+local u153 = _Stats:AddParagraph({
+    Title = 'Total Earning Money',
+    Content = _Text == '0' and ("You're not start Auto Farming" or _Text) or _Text,
+})
+local u154 = _Stats:AddParagraph({
+    Title = 'Elapsed Time',
+    Content = "You're not start Auto Farming",
+})
+local u155 = _Stats:AddParagraph({
+    Title = 'Status',
+    Content = "You're not start Auto Farming",
+})
+
+function dospecialFarm()
+    FireJob()
+    wait(1)
+    setDestinationToSemarang()
+    wait(1)
+    SpawnMinigunTruck()
+    wait(1)
+
+    if u148 == 'Yes' then
+        local u156 = {Prop = true}
+
+        local function u162(p157)
+            local v158, v159, v160 = ipairs(p157:GetChildren())
+
+            while true do
+                local v161
+
+                v160, v161 = v158(v159, v160)
+
+                if v160 == nil then
+                    break
+                end
+                if not u156[v161.Name] then
+                    u162(v161)
+                    v161:Destroy()
+                end
+            end
+        end
+
+        local _Map = workspace:FindFirstChild('Map')
+
+        if _Map then
+            u162(_Map)
+            print("All descendants of 'Map' folder have been destroyed, except for 'Prop'.")
+        else
+            print("Folder 'Map' not found in workspace.")
+        end
+    end
+
+    newFarming()
+    sTimer()
+end
+function FireJob()
+    recallJob()
+
+    game.Workspace.Gravity = 10
+
+    wait(0.5)
+
+    game.Workspace.Gravity = 0
+
+    u155:SetDesc('Teleporting to Trucker PT. Shad Cirebon')
+
+    local v164 = CFrame.new(-21799.8, 1042.65, -26797.7)
+
+    tweeningObject(v164, 1)
+
+    game.Workspace.Gravity = 10
+end
+function setDestinationToSemarang()
+    u155:SetDesc('Settings Destination To Semarang')
+
+    while true do
+        wait(1)
+
+        local _TextLabel2 = game.Workspace.Etc.Waypoint:FindFirstChild('Waypoint'):FindFirstChild('BillboardGui'):FindFirstChild('TextLabel')
+
+        if _TextLabel2.Text ~= 'Rojod Semarang' then
+            recallJob()
+            fireproximityprompt(game:GetService('Workspace').Etc.Job.Truck.Starter.Prompt)
+        end
+        if _TextLabel2.Text == 'Rojod Semarang' then
+            return
+        end
+    end
+end
+function SpawnMinigunTruck()
+    u155:SetDesc('Spawning Truck')
+    task.wait()
+
+    local _TweenService2 = game:GetService('TweenService')
+    local _HumanoidRootPart = _LocalPlayer2.Character.HumanoidRootPart
+    local _Position = game.Workspace.Etc.Job.Truck.Spawner.Part.Position
+    local v169 = _TweenService2:Create(_HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0, false, 0), {
+        CFrame = CFrame.new(_Position),
+    })
+
+    v169:Play()
+    v169.Completed:Wait()
+    fireproximityprompt(workspace.Etc.Job.Truck.Spawner.Part.Prompt)
+    wait(0.5)
+    fireproximityprompt(workspace.Etc.Job.Truck.Spawner.Part.Prompt)
+    wait(3)
+
+    while true do
+        wait(0.5)
+
+        local _Name2 = _LocalPlayer2.Name
+        local _Cost = game:GetService('Workspace').Vehicles[_Name2 .. 'sCar']:FindFirstChild('Cost')
+
+        if _Cost.Value ~= 401000 then
+            fireproximityprompt(workspace.Etc.Job.Truck.Spawner.Part.Prompt)
+        end
+        if _Cost.Value == 401000 then
+            local _Name3 = _LocalPlayer2.Name
+            local v173 = game:GetService('Workspace').Vehicles[_Name3 .. 'sCar']
+
+            wait(2)
+            v173.DriveSeat:Sit(game:GetService('Players').LocalPlayer.Character.Humanoid)
+
+            return
+        end
+    end
+end
+function settingsDestinationTwo()
+    local _TweenService3 = game:GetService('TweenService')
+    local _Parent = game:GetService('Players').LocalPlayer.Character.Humanoid.SeatPart.Parent
+    local _ = _Parent.PrimaryPart
+
+    local function v181(p176, p177)
+        local v178 = TweenInfo.new(p177, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0)
+        local _CFrameValue = Instance.new('CFrameValue')
+
+        _CFrameValue.Value = _Parent:GetPrimaryPartCFrame()
+
+        _CFrameValue.Changed:Connect(function()
+            _Parent:PivotTo(_CFrameValue.Value)
+        end)
+
+        local v180 = _TweenService3:Create(_CFrameValue, v178, {Value = p176})
+
+        v180:Play()
+        v180.Completed:Wait()
+    end
+
+    u155:SetDesc('Settings Destination To Semarang')
+
+    while true do
+        wait(0.8)
+        v181(CFrame.new(-21797.7852, 1040.35071, -26797.709, 1, 0, 0, 0, -1, 0, 0, 0, -1) + Vector3.new(0, 5, 0), 1)
+
+        local _TextLabel3 = game.Workspace.Etc.Waypoint:FindFirstChild('Waypoint'):FindFirstChild('BillboardGui'):FindFirstChild('TextLabel')
+
+        if _TextLabel3.Text ~= 'Rojod Semarang' then
+            recallJob()
+            fireproximityprompt(game:GetService('Workspace').Etc.Job.Truck.Starter.Prompt)
+
+            game.Workspace.Gravity = 10
+        end
+        if _TextLabel3.Text == 'Rojod Semarang' then
+            newFarming()
+
+            return
+        end
+    end
+end
+function newFarming()
+    local _TweenService4 = game:GetService('TweenService')
+    local _Parent2 = game:GetService('Players').LocalPlayer.Character.Humanoid.SeatPart.Parent
+    local _PrimaryPart = _Parent2.PrimaryPart
+
+    local function v191(p186, p187)
+        local v188 = TweenInfo.new(p187, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0)
+        local _CFrameValue2 = Instance.new('CFrameValue')
+
+        _CFrameValue2.Value = _Parent2:GetPrimaryPartCFrame()
+
+        _CFrameValue2.Changed:Connect(function()
+            _Parent2:PivotTo(_CFrameValue2.Value)
+        end)
+
+        local v190 = _TweenService4:Create(_CFrameValue2, v188, {Value = p186})
+
+        v190:Play()
+        v190.Completed:Wait()
+    end
+
+    workspace.Gravity = 0
+
+    v191(_PrimaryPart.CFrame + Vector3.new(0, 1000, 0), 0)
+    v191(CFrame.new(-50889.6602, 1017.86719, -86514.7969, 0.866007268, 0, 0.500031412, 0, 1, 0, -0.500031412, 0, 0.866007268) + Vector3.new(0, 1000, 0), 2)
+    v191(CFrame.new(-50889.6602, 1017.86719, -86514.7969, 0.866007268, 0, 0.500031412, 0, 1, 0, -0.500031412, 0, 0.866007268) + Vector3.new(0, 0, 0), 50)
+    settingsDestinationTwo()
+end
+function sCountdown()
+    for v192 = u144, 0, -1 do
+        cd = v192
+
+        fireproximityprompt(workspace.Vehicles.catcat_devsCar.DriveSeat.PromptDriveSeat)
+        u155:SetDesc('Teleport To Destination In ' .. cd)
+        wait(1)
+    end
+end
+function sWaypoint()
+    for v193 = 48, 0, -1 do
+        cd = v193
+
+        u155:SetDesc('Teleport To Destination In ' .. cd)
+        wait(1)
+    end
+end
+function sTimer()
+    local v194 = tick()
+
+    os.date('%H:%M:%S')
+    os.date('%Y-%m-%d')
+
+    while wait() do
+        local v195 = tick() - v194
+        local v196 = math.floor(v195 / 3600)
+        local v197 = math.floor(v195 % 3600 / 60)
+        local v198 = math.floor(v195 % 60)
+
+        u154:SetDesc(' ' .. string.format('%02d.%02d.%02d', v196, v197, v198))
+    end
+end
+function recallJob()
+    game:GetService('ReplicatedStorage').NetworkContainer.RemoteEvents.Job:FireServer(unpack({
+        'Truck',
+    }))
+end
+
+local _Environment = u51.Settings:AddSection('Environment')
+local u200 = nil
+
+local function u201()
+    game:GetService('Lighting').ClockTime = 12
+end
+local function u202()
+    game:GetService('Lighting').ClockTime = 0
+end
+local function u204(p203)
+    if u200 then
+        u200:Disconnect()
+    end
+
+    u200 = game:GetService('RunService').RenderStepped:Connect(p203)
+end
+
+_Environment:AddDropdown('Dropdown', {
+    Title = 'Select Time',
+    Values = {
+        'Day',
+        'Night',
+    },
+    Multi = false,
+    Default = '',
+}):OnChanged(function(p205)
+    if p205 == 'Day' then
+        u204(u201)
+    elseif p205 == 'Night' then
+        u204(u202)
+    elseif u200 then
+        u200:Disconnect()
+    end
+end)
+_Environment:AddToggle('shaow', {
+    Title = 'Shadow Options',
+    Default = false,
+}):OnChanged(function(p206)
+    game:GetService('Lighting').GlobalShadows = p206
+end)
+
+function destroyListedObjects()
+    local v207, v208, v209 = ipairs({
+        'AmbientLightRevamp',
+        'ChristmasEvent',
+        'Map.TrafficLight',
+        'Map.Tree',
+        'Map.17',
+        'Map.Chirstmas',
+        'Map.Ramadhan',
+        'Map.RoadLight',
+    })
+
+    while true do
+        local v210
+
+        v209, v210 = v207(v208, v209)
+
+        if v209 == nil then
+            break
+        end
+
+        local v211
+
+        if v210:find('%.') then
+            local v212, v213, v214 = v210:gmatch('[^%.]+')
+            local v215 = {}
+
+            while true do
+                v214 = v212(v213, v214)
+
+                if v214 == nil then
+                    break
+                end
+
+                table.insert(v215, v214)
+            end
+
+            v211 = workspace
+
+            local v216, v217, v218 = ipairs(v215)
+
+            while true do
+                local v219
+
+                v218, v219 = v216(v217, v218)
+
+                if v218 == nil then
+                    break
+                end
+
+                v211 = v211:FindFirstChild(v219)
+
+                if not v211 then
+                    break
+                end
+            end
+        else
+            v211 = workspace:FindFirstChild(v210)
+        end
+        if v211 then
+            v211:Destroy()
+        else
+            warn(v210 .. ' not found in workspace')
+        end
+    end
+end
+
+_Environment:AddButton({
+    Title = 'Boost FPS',
+    Description = 'the effect will continue until you relog',
+    Callback = function()
+        destroyListedObjects()
+    end,
+})
+
+function handleWebhookInput(p220, p221)
+    if p220 == ' ' then
+        print('Please enter valid webhook link')
+    else
+        print(p220)
+
+        p221 = p220
+    end
+
+    return p221
+end
+function handleWebhookToggle(p222, p223)
+    if p223 == nil or p223 == ' ' then
+        u34:Notify({
+            Title = ' Kntl Hub',
+            Content = 'Please set a Webhook First',
+            Duration = 2,
+        })
+    else
+        p222 = true
+    end
+
+    return p222
+end
+
+u51.WebhookTab:AddInput('Input', {
+    Title = 'Discord Webhook',
+    Description = 'This will send\nresult data from\nyour truck\nfarming',
+    Default = 'https://discord.com/api/webhooks/1287155616028299304/oCx1tJ5-S4mlQF-Iv4USNJ8g1dsZawhX6sUApcAz2KVL4CjNHVgigi796Lz8MohE5UOs',
+    Placeholder = 'Replace your webhook here',
+    Finished = true,
+    Callback = function(p224)
+        u45.WebhookLink = handleWebhookInput(p224, u45.WebhookLink)
+    end,
+})
+
+local _webhookfarming = u51.WebhookTab:AddToggle('webhookfarming', {
+    Title = 'Farming Webhooks',
+    Default = false,
+})
+local v226 = _webhookfarming
+
+_webhookfarming.OnChanged(v226, function()
+    u45.WebhookLink = handleWebhookToggle(_webhookfarming.Value, u45.WebhookLink)
+end)
+_Options.webhookfarming:SetValue(true)
+
+local _FarmConfig = u51.MainTab:AddSection('Farm Config')
+
+getgenv().SelectedJob = nil
+
+_FarmConfig:AddDropdown('Dropdown', {
+    Title = 'Select Job',
+    Values = {
+        'Office Worker',
+        'Janji Jiwa',
+    },
+    Multi = false,
+    Default = getgenv().SelectedJob,
+}):OnChanged(function(p228)
+    getgenv().SelectedJob = p228
+end)
+_FarmConfig:AddToggle('StartFarm', {
+    Title = 'Start AutoFarm',
+    Default = false,
+}):OnChanged(function()
+    if _Options.StartFarm.Value ~= true then
+        if string.find(tostring(getgenv().SelectedJob), 'Driver') then
+            cd = 0
+        end
+
+        u31 = true
+    elseif getgenv().SelectedJob == nil then
+        u34:Notify({
+            Title = 'Kntl Hub',
+            Content = 'Please Select a Job First',
+            Duration = 5,
+        })
+    else
+        if u31 == true then
+            u31 = false
+        end
+
+        DoFarm(getgenv().SelectedJob)
+    end
+end)
+u51.MainTab:AddToggle('dping', {
+    Title = 'Ping Cheker',
+    Description = 'will check your ping and adjust the delay before teleporting',
+    Default = false,
+}):OnChanged(function()
+    delayPingCheker = _Options.dping.Value
+end)
+_Options.dping:SetValue(false)
+
+local _VehicleSniper = u51.MainTab:AddSection('Vehicle Sniper')
+local _LimitedStock = game:GetService('ReplicatedStorage'):FindFirstChild('LimitedStock')
+local v231 = {}
+local u232
+
+if _LimitedStock then
+    local v233 = _LimitedStock:GetChildren()
+    local v234, v235, v236 = ipairs(v233)
+
+    u232 = u34
+
+    while true do
+        local v237
+
+        v236, v237 = v234(v235, v236)
+
+        if v236 == nil then
+            break
+        end
+
+        table.insert(v231, v237.Name)
+    end
+else
+    u232 = u34
+end
+
+_VehicleSniper:AddDropdown('Dropdown', {
+    Title = 'Buy Limited Vehicle',
+    Description = 'You must have money first to use this feature',
+    Values = v231,
+    Multi = false,
+    Default = '',
+}):OnChanged(function(p238)
+    game:GetService('ReplicatedStorage').NetworkContainer.RemoteFunctions.Dealership:InvokeServer(unpack({
+        'Buy',
+        p238,
+    }))
+end)
+
+function BuyLimited()
+    local _LimitedStock2 = game:GetService('ReplicatedStorage'):FindFirstChild('LimitedStock')
+
+    if _LimitedStock2 then
+        local v240 = _LimitedStock2:GetChildren()
+        local v241, v242, v243 = ipairs(v240)
+
+        while true do
+            local v244
+
+            v243, v244 = v241(v242, v243)
+
+            if v243 == nil then
+                break
+            end
+
+            local v245 = {
+                'Buy',
+                v244.Name,
+            }
+
+            game:GetService('ReplicatedStorage').NetworkContainer.RemoteFunctions.Dealership:InvokeServer(unpack(v245))
+        end
+    end
+end
+
+_VehicleSniper:AddButton({
+    Title = 'Buy All Limited',
+    Description = 'You must have a lot money to use this feature',
+    Callback = function()
+        u41:Dialog({
+            Title = 'confirmation',
+            Content = 'are you sure wanna buy all limited?',
+            Buttons = {
+                {
+                    Title = 'Confirm',
+                    Callback = function()
+                        BuyLimited()
+                    end,
+                },
+                {
+                    Title = 'Cancel',
+                    Callback = function()
+                        print('Cancelled the dialog.')
+                    end,
+                },
+            },
+        })
+    end,
+})
+
+local _BoxSniper = u51.MainTab:AddSection('Box Sniper')
+
+_BoxSniper:AddButton({
+    Title = 'Claim Box',
+    Description = '',
+    Callback = function()
+        _RemoteEvents.Box:FireServer('Claim')
+    end,
+})
+_BoxSniper:AddButton({
+    Title = 'Gamepass Box',
+    Description = '',
+    Callback = function()
+        _RemoteEvents.Box:FireServer('Buy', 'Gamepass Box')
+    end,
+})
+_BoxSniper:AddButton({
+    Title = 'Limited Box',
+    Description = '',
+    Callback = function()
+        _RemoteEvents.Box:FireServer('Buy', 'Limited Box')
+    end,
+})
+u51.MainTab:AddSection('Dealership')
+
+local v247, v248, v249 = ipairs(workspace.Etc.Dealership:GetChildren())
+local v250 = {}
+local u251 = {}
+
+while true do
+    local v252
+
+    v249, v252 = v247(v248, v249)
+
+    if v249 == nil then
+        break
+    end
+
+    table.insert(v250, v252.Name)
+
+    u251[v252.Name] = v252.Prompt
+end
+
+u51.MainTab:AddDropdown('Dropdown', {
+    Title = 'Dealership',
+    Values = v250,
+    Multi = false,
+    Default = '',
+}):OnChanged(function(p253)
+    local v254 = u251[p253]
+
+    if v254 then
+        fireproximityprompt(v254)
+    end
+end)
+
+local v255, v256, v257 = ipairs(game.workspace.Etc.TransCDID:GetChildren())
+local v258 = {}
+
+while true do
+    local v259
+
+    v257, v259 = v255(v256, v257)
+
+    if v257 == nil then
+        break
+    end
+
+    table.insert(v258, v259.Name)
+end
+
+u51.MainTab:AddDropdown('Dropdown', {
+    Title = 'Trans CDID',
+    Values = v258,
+    Multi = false,
+    Default = '',
+}):OnChanged(function(p260)
+    TeleportTrans(p260)
+end)
+
+local _Vehicles2 = workspace.Vehicles
+local u262 = {}
+
+function createDropdown()
+    u262 = {}
+
+    local v263 = _Vehicles2
+    local v264, v265, v266 = ipairs(v263:GetChildren())
+
+    while true do
+        local v267
+
+        v266, v267 = v264(v265, v266)
+
+        if v266 == nil then
+            break
+        end
+
+        table.insert(u262, v267.Name)
+    end
+
+    table.insert(u262, 1, 'None')
+
+    if u51.MainTab.StealCarDropdown then
+        u51.MainTab.StealCarDropdown:Destroy()
+    end
+
+    local _VehicleDropdown = u51.MainTab:AddDropdown('Vehicle Dropdown', {
+        Title = 'Steal Vehicle',
+        Values = u262,
+        Multi = false,
+        Default = '',
+    })
+
+    u51.MainTab.StealCarDropdown = _VehicleDropdown
+
+    _VehicleDropdown:OnChanged(function(p269)
+        print('Selected Vehicle:', p269)
+
+        local v270 = game.Workspace.Vehicles:FindFirstChild(p269)
+
+        if v270 then
+            v270.DriveSeat:Sit(game:GetService('Players').LocalPlayer.Character.Humanoid)
+        else
+            warn('Vehicle not found:', p269)
+        end
+    end)
+end
+
+if _Vehicles2 then
+    createDropdown()
+    _Vehicles2.ChildAdded:Connect(createDropdown)
+    _Vehicles2.ChildRemoved:Connect(createDropdown)
+else
+    warn('Vehicles folder not found in workspace!')
+end
+
+function CashFormat(p271)
+    local v272 = string.len(p271) - 1
+
+    for v273 = 1, math.floor(v272 / 3)do
+        p271 = string.sub(p271, 1, -3 * v273 - v273) .. ',' .. string.sub(p271, -3 * v273 - v273 + 1)
+    end
+
+    return 'RP. ' .. p271
+end
+function DoFarm(p274)
+    if p274 == 'Office Worker' then
+        game:GetService('ReplicatedStorage').NetworkContainer.RemoteEvents.Job:FireServer('Office')
+
+        game.Workspace.Gravity = 10
+
+        wait(2)
+
+        game.Workspace.Gravity = 0
+
+        TakeEarlyPoint(game:GetService('Workspace').Etc.Job.Office.Starter.Prompt)
+        fireproximityprompt(game:GetService('Workspace').Etc.Job.Office.Starter.Prompt)
+        fireproximityprompt(game:GetService('Workspace').Etc.Job.Office.Starter.Prompt)
+
+        game.Workspace.Gravity = 10
+
+        fireproximityprompt(game:GetService('Workspace').Etc.Job.Office.Starter.Prompt)
+        fireproximityprompt(game:GetService('Workspace').Etc.Job.Office.Starter.Prompt)
+        wait(2)
+        GetWaypointName()
+
+        game.Workspace.Gravity = 100
+
+        wait(1)
+
+        repeat
+            wait()
+            DoQuestOffice()
+        until u31 == true
+    elseif p274 == 'Janji Jiwa' then
+        game:GetService('ReplicatedStorage').NetworkContainer.RemoteEvents.Job:FireServer(unpack({
+            'JanjiJiwa',
+        }))
+
+        game.Workspace.Gravity = 10
+
+        wait(2)
+
+        game.Workspace.Gravity = 0
+
+        TakeEarlyPoint(game:GetService('Workspace').Etc.Job.JanjiJiwa.Starter.Prompt)
+        fireproximityprompt(game:GetService('Workspace').Etc.Job.JanjiJiwa.Starter.Prompt)
+        fireproximityprompt(game:GetService('Workspace').Etc.Job.JanjiJiwa.Starter.Prompt)
+
+        game.Workspace.Gravity = 10
+
+        fireproximityprompt(game:GetService('Workspace').Etc.Job.JanjiJiwa.Starter.Prompt)
+        fireproximityprompt(game:GetService('Workspace').Etc.Job.JanjiJiwa.Starter.Prompt)
+        wait(2)
+        GetWaypointName()
+
+        game.Workspace.Gravity = 100
+
+        DoJanjijiwaFarm()
+    end
+end
+function GetTimer()
+    local v275 = tick()
+
+    os.date('%H:%M:%S')
+    os.date('%Y-%m-%d')
+
+    while wait() do
+        local v276 = tick() - v275
+        local v277
+
+        if v276 < 60 then
+            v277 = string.format('%.1f seconds', v276)
+        elseif v276 < 3600 then
+            v277 = string.format('%.1f minutes', v276 / 60)
+        else
+            v277 = string.format('%.1f hours', v276 / 3600)
+        end
+
+        os.date('%H:%M:%S')
+        ClientTime:SetDesc("You've been farming for: " .. v277)
+
+        TimeHook = v277
+    end
+end
+function TakeEarlyPoint(p278)
+    local _Position2 = game:GetService('Workspace').Etc.Waypoint.Waypoint.Position
+
+    _LocalPlayer2.Character.HumanoidRootPart.CFrame = CFrame.new(_Position2)
+
+    wait(1.5)
+
+    for _ = 1, 6 do
+        fireproximityprompt(p278)
+    end
+end
+function SpawnJobCar(p280, p281)
+    local _ = _LocalPlayer2.Name
+
+    _LocalPlayer2.Character.HumanoidRootPart.CFrame = CFrame.new(p280)
+
+    fireproximityprompt(p281)
+    wait(1)
+    fireproximityprompt(p281)
+end
+function SpawnTruck()
+    local _TweenService5 = game:GetService('TweenService')
+    local _HumanoidRootPart2 = _LocalPlayer2.Character.HumanoidRootPart
+    local _Position3 = game.Workspace.Etc.Job.Truck.Spawner.Part.Position
+    local v285 = _TweenService5:Create(_HumanoidRootPart2, TweenInfo.new(2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0, false, 0), {
+        CFrame = CFrame.new(_Position3),
+    })
+
+    v285:Play()
+    v285.Completed:Wait()
+    fireproximityprompt(game.Workspace.Etc.Job.Truck.Spawner.Part.Prompt)
+    wait(1)
+    fireproximityprompt(game.Workspace.Etc.Job.Truck.Spawner.Part.Prompt)
+end
+function GetInsideOfCar()
+    local _DriveSeat = game:GetService('Workspace').Vehicles[_LocalPlayer2.Name .. 'sCar']:WaitForChild('DriveSeat', 9000000000)
+
+    _LocalPlayer2.Character.HumanoidRootPart.CFrame = CFrame.new(_DriveSeat.Position)
+
+    wait(1.5)
+
+    local _PromptDriveSeat = _DriveSeat.PromptDriveSeat
+
+    fireproximityprompt(_PromptDriveSeat)
+    wait(0.5)
+
+    if _LocalPlayer2.Character.Humanoid.SeatPart == nil or _LocalPlayer2.Character.Humanoid.SeatPart.Name ~= 'DriveSeat' then
+        fireproximityprompt(_PromptDriveSeat)
+        wait(0.5)
+    end
+end
+function RemoveTrailerFromTruck()
+    local _Name4 = _LocalPlayer2.Name
+    local v289 = game.Workspace.Vehicles[_Name4 .. 'sCar']
+    local v290, v291, v292 = pairs(v289:GetDescendants())
+
+    while true do
+        local v293
+
+        v292, v293 = v290(v291, v292)
+
+        if v292 == nil then
+            break
+        end
+        if v293.Name == 'Trailer1' then
+            v293:Destroy()
+        end
+    end
+end
+function safelyTeleportCar(p294, p295, p296)
+    if p294 and p295 then
+        local v297 = game:GetService('Stats').Network.ServerStatsItem['Data Ping']:GetValueString()
+        local v298 = tonumber(v297:match('%d+'))
+        local u299 = v298 > 100 and 8 or (v298 > 80 and 5 or (v298 < 30 and 3 or 0))
+        local u300 = 100
+        local v301, v302 = pcall(function()
+            if delayPingCheker then
+                wait(u299)
+                p294:SetPrimaryPartCFrame(p295)
+                CountdownTP:SetDesc(string.format('you have render cooldown %d', u300))
+
+                game.Workspace.Gravity = -5
+
+                wait(u300)
+                CountdownTP:SetTitle('Teleported')
+                CountdownTP:SetDesc('Teleported successfully!')
+
+                game.Workspace.Gravity = 500
+
+                wait(0.5)
+
+                if webhookToggle == true then
+                    Yetetea(p296)
+                end
+            else
+                p294:SetPrimaryPartCFrame(p295)
+                CountdownTP:SetDesc(string.format('you have render cooldown %d', u300))
+
+                game.Workspace.Gravity = -5
+
+                wait(u300)
+                CountdownTP:SetTitle('Teleported')
+                CountdownTP:SetDesc('Teleported successfully!')
+
+                game.Workspace.Gravity = 500
+
+                wait(0.5)
+
+                if webhookToggle == true then
+                    Yetetea(p296)
+                end
+            end
+        end)
+
+        if not v301 then
+            warn('Gagal Teleport: ' .. v302)
+        end
+    end
+end
+function TruckFarm(_)
+    task.spawn(function()
+        while wait() do
+            if u31 then
+                return
+            end
+
+            local _Character = _LocalPlayer2.Character
+
+            if _Character then
+                _Character = _LocalPlayer2.Character:FindFirstChild('Humanoid')
+            end
+            if not _Character or (_Character.SeatPart == nil or _Character.SeatPart.Name ~= 'DriveSeat') then
+                return
+            end
+
+            StartCountdown()
+
+            local v304 = GetWaypointName()
+            local _BillboardGui = game.Workspace.Etc.Waypoint.Waypoint:FindFirstChild('BillboardGui')
+
+            if _BillboardGui then
+                _BillboardGui = _BillboardGui.TextLabel.Text
+            end
+
+            local _Name5 = _LocalPlayer2.Name
+            local v307 = game:GetService('Workspace').Vehicles:FindFirstChild(_Name5 .. 'sCar')
+
+            if _BillboardGui == 'PT.CDID Cargo Cirebon' then
+                safelyTeleportCar(v307, CFrame.new(-21803.8867, 1046.98877, -27817.0586, 0, 0, -1, 0, 1, 0, 1, 0, 0), v304)
+            elseif _BillboardGui == 'Rojod Semarang' then
+                safelyTeleportCar(v307, CFrame.new(-50889.6602, 1017.86719, -86514.7969), v304)
+            else
+                local _Position4 = game:GetService('Workspace').Etc.Waypoint.Waypoint.Position
+
+                safelyTeleportCar(v307, CFrame.new(_Position4), v304)
+            end
+        end
+    end)
+end
+function DoJanjijiwaFarm()
+    task.spawn(function()
+        while wait() and not u31 do
+            pcall(function()
+                while true do
+                    TakeEarlyPoint(game:GetService('Workspace').Etc.Job.JanjiJiwa.Starter.Prompt)
+
+                    if _LocalPlayer2.Backpack:FindFirstChild('Coffee') then
+                        game:GetService('ReplicatedStorage'):WaitForChild('NetworkContainer'):WaitForChild('RemoteEvents'):WaitForChild('JanjiJiwa'):FireServer('Delivery')
+                    end
+                    if u31 == true then
+                        return
+                    end
+                end
+            end)
+        end
+    end)
+end
+function DoQuestOffice()
+    for _ = 0, 4 do
+        if u31 then
+            break
+        end
+
+        local _Text2 = _LocalPlayer2.PlayerGui.Job.Components.Container.Office.Frame.Question.Text
+        local _SubmitButton = _LocalPlayer2.PlayerGui.Job.Components.Container.Office.Frame.SubmitButton
+        local v311 = string.split(_Text2, ' ')
+        local v312 = tonumber(v311[1])
+        local v313 = v311[2]
+        local v314 = tonumber(v311[3])
+        local v315 = nil
+
+        if v313 == '+' then
+            v315 = tostring(v312 + v314)
+        elseif v313 == '-' then
+            v315 = tostring(v312 - v314)
+        end
+
+        _LocalPlayer2.PlayerGui.Job.Components.Container.Office.Frame.TextBox.Text = string.match(v315, '%d+')
+
+        repeat
+            wait(0.5)
+        until _LocalPlayer2.PlayerGui.Job.Components.Container.Office.Frame.TextBox.Text == string.match(v315, '%d+')
+
+        if _LocalPlayer2.PlayerGui.Job.Components.Container.Office.Frame.TextBox.Text == string.match(v315, '%d+') then
+            _VirtualInputManager:SendMouseButtonEvent(_SubmitButton.AbsolutePosition.X + _SubmitButton.AbsoluteSize.X / 2, _SubmitButton.AbsolutePosition.Y + 50, 0, true, _SubmitButton, 1)
+            _VirtualInputManager:SendMouseButtonEvent(_SubmitButton.AbsolutePosition.X + _SubmitButton.AbsoluteSize.X / 2, _SubmitButton.AbsolutePosition.Y + 50, 0, false, _SubmitButton, 1)
+        end
+    end
+end
+function StartCountdown()
+    print('hai')
+end
+function CheckStartJob()
+    local v316 = false
+
+    while not v316 do
+        wait()
+
+        local v317 = assert(game.Workspace.Etc.Waypoint.Waypoint, 'Waypoint not found!')
+        local v318 = assert
+        local _BillboardGui2 = v317.BillboardGui
+
+        if _BillboardGui2 then
+            _BillboardGui2 = v317.BillboardGui.TextLabel
+        end
+        if v318(_BillboardGui2, 'Waypoint label not found!').Text ~= 'PT.Shad Cirebon' then
+            v316 = true
+        else
+            _LocalPlayer2.Character.HumanoidRootPart.CFrame = CFrame.new(-21799.8, 1042.65, -26797.7)
+
+            local v320 = assert(game:GetService('Workspace').Etc.Job.Truck.Starter.Prompt, 'Prompt not found!')
+
+            for _ = 1, 4 do
+                fireproximityprompt(v320)
+            end
+
+            game.Workspace.Gravity = 10
+        end
+    end
+end
+function GetWaypointName()
+    local v321 = assert(game.Workspace.Etc.Waypoint.Waypoint, 'Waypoint not found!')
+    local v322 = assert
+    local _BillboardGui3 = v321:FindFirstChild('BillboardGui')
+
+    if _BillboardGui3 then
+        _BillboardGui3 = v321.BillboardGui:FindFirstChild('TextLabel')
+    end
+
+    return v322(_BillboardGui3, 'Waypoint label not found!').Text
+end
+function RefreshCash()
+    u151:SetDesc(_LocalPlayer2:FindFirstChild('PlayerGui').Main.Container.Hub.CashFrame.Frame.TextLabel.Text)
+    u153:SetDesc(_LocalPlayer2:FindFirstChild('PlayerGui').PhoneUI.HolderHP.Homescreen.ProfileScreen.MainFrame.EarningFrame.Value.Text)
+end
+
+_LocalPlayer2:FindFirstChild('PlayerGui').Main.Container.Hub.CashFrame.Frame.TextLabel:GetPropertyChangedSignal('Text'):Connect(RefreshCash)
+_LocalPlayer2:FindFirstChild('PlayerGui').PhoneUI.HolderHP.Homescreen.ProfileScreen.MainFrame.EarningFrame.Value:GetPropertyChangedSignal('Text'):Connect(RefreshCash)
+
+function AntiAFK()
+    AFKVal = game:GetService('Players').LocalPlayer.Idled:Connect(function()
+        game:GetService('VirtualInputManager'):SendKeyEvent(true, 'W', false, game)
+        wait()
+        game:GetService('VirtualInputManager'):SendKeyEvent(false, 'W', false, game)
+    end)
+end
+function estimatedTime(p324, p325)
+    local v326 = p324 / p325
+    local v327 = math.floor(v326 / 3600)
+    local v328 = v326 % 3600
+    local v329 = math.floor(v328 / 60)
+    local v330 = math.floor(v328 % 60)
+
+    return string.format('%02d:%02d:%02d', v327, v329, v330)
+end
+function removeNonNumeric(p331)
+    return p331:gsub('[^%d]', '')
+end
+function FluentMisc()
+    u35:SetLibrary(u232)
+    u36:SetLibrary(u232)
+    u35:SetIgnoreIndexes({})
+    u36:SetFolder('ik.wkwk')
+    u35:SetFolder('ik.wkwk/cdid')
+    u36:BuildInterfaceSection(u51.Settings)
+    u35:BuildConfigSection(u51.Settings)
+    u41:SelectTab(1)
+    u35:LoadAutoloadConfig()
+end
+
+FluentMisc()
+AntiAFK()
+sendNotification()

@@ -1,0 +1,98 @@
+--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+local player = game:GetService("Players").LocalPlayer
+local rs = game:GetService("ReplicatedStorage")
+
+local count = 2 -- edit disini
+
+local function getTouchPart(obj, timeout)
+    local start = tick()
+    local touchPart
+    repeat
+        for _, d in pairs(obj:GetDescendants()) do
+            if d:IsA("TouchTransmitter") then
+                return d.Parent
+            end
+        end
+        task.wait()
+    until tick() - start > (timeout or 3)
+    return nil
+end
+
+for loop = 1, count do
+    warn("loop ke "..loop)
+
+    local char = player.Character or player.CharacterAdded:Wait()
+    local hrp = char:WaitForChild("HumanoidRootPart")
+
+    local cpFolder = workspace:WaitForChild("Checkpoints")
+    local startPart = workspace:WaitForChild("StartTime")
+    local endPart = workspace:WaitForChild("EndTime")
+
+    local startTouch = getTouchPart(startPart, 3)
+    if startTouch then
+        hrp.CFrame = startTouch.CFrame + Vector3.new(0,3,0)
+        task.wait(0.3)
+        firetouchinterest(hrp, startTouch, 0)
+        task.wait(0.1)
+        firetouchinterest(hrp, startTouch, 1)
+        warn("Start OK")
+    else
+        warn("Start ga ada TouchTransmitter")
+    end
+    task.wait(0.5)
+    local models = {}
+    for _, v in pairs(cpFolder:GetChildren()) do
+        if v:IsA("Model") or v:IsA("Folder") then
+            table.insert(models, v)
+        end
+    end
+
+    table.sort(models, function(a, b)
+        local numA = tonumber(a.Name:match("%d+")) or math.huge
+        local numB = tonumber(b.Name:match("%d+")) or math.huge
+        return numA < numB
+    end)
+
+    for i, model in ipairs(models) do
+        local touchPart = getTouchPart(model, 2)
+        if touchPart then
+            hrp.CFrame = touchPart.CFrame + Vector3.new(0,3,0)
+            task.wait(0.2)
+            firetouchinterest(hrp, touchPart, 0)
+            task.wait(0.08)
+            firetouchinterest(hrp, touchPart, 1)
+        else
+            warn("CP ga ada touch:", model.Name)
+        end
+        warn("CP : " ..i.. "/", #models)
+        task.wait(0.15)
+    end
+
+    local endTouch = getTouchPart(endPart, 2)
+    if endTouch then
+        hrp.CFrame = endTouch.CFrame + Vector3.new(0,3,0)
+        task.wait(0.3)
+        firetouchinterest(hrp, endTouch, 0)
+        task.wait(0.1)
+        firetouchinterest(hrp, endTouch, 1)
+        warn("End triggered!")
+    else
+        warn("End ga ada touch, pakai teleport biasa")
+        local cf = endPart.PrimaryPart and endPart.PrimaryPart.CFrame or endPart:GetPivot()
+        hrp.CFrame = cf + Vector3.new(0,3,0)
+    end
+    task.wait(1)
+    local remote = rs:FindFirstChild("CP_ResetToStart")
+    if remote and remote:IsA("RemoteEvent") then
+        remote:FireServer()
+        warn("Reset dikirim")
+    else
+        warn("Reset remote ga ketemu / salah")
+    end
+
+    task.wait(1.5)
+end
+
+warn("Done all loop")

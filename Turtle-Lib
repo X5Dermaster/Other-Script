@@ -297,6 +297,11 @@ function library:Window(name)
         pastSliders[winCount] = false
     end
     function functions:Box(text, textdalambox, callback)
+		if typeof(textdalambox) == "function" then
+			callback = textdalambox
+			textdalambox = text
+		end
+
         local callback = callback or function() end
 
         sizes[winCount] = sizes[winCount] + 32

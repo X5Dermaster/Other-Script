@@ -113,8 +113,8 @@ do
             return
         end
 
-        DataUser.DiscordUsername = data.discordUsername
-        DataUser.DiscordId = data.discordId
+        --[[DataUser.DiscordUsername = data.discordUsername
+        DataUser.DiscordId = data.discordId]]
 
         local hwid = nil
 
